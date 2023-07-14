@@ -1,8 +1,43 @@
-# Getting Started with Create React App
+# CV Application
+
+This project involves creating a CV (resume) application using React.
+
+### Instructions
+
+1. Create a new React project using `npx create-react-app cv-project``
+
+2. Remove the default boilerplate code
+
+3. Use class components instead of functions
+
+4. Structure your app into components like:
+
+- General info (name, email, phone)
+- Education (school, title, dates)
+- Experience (company, role, tasks, dates)
+
+5. Add edit and submit buttons
+
+- Submit displays entered data
+- Edit enables editing the data
+
+6. Use state and props to manage form data flow
+
+7. Create `components` and `styles` folders in `src`
+
+8. Import CSS files into components
+
+9. Push your solution to GitHub when complete!
+
+### Deployment
+
+To clone and deploy this project, refer to the below guide:
+
+### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
