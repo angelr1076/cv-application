@@ -4,7 +4,7 @@ This project involves creating a CV (resume) application using React.
 
 ### Instructions
 
-1. Create a new React project using `npx create-react-app cv-project``
+1. Create a new React project using `npx create-react-app cv-project`
 
 2. Remove the default boilerplate code
 
