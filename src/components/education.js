@@ -2,29 +2,46 @@ import React from 'react';
 
 class Education extends React.Component {
   render() {
+    const { handleChange } = this.props;
+
     return (
       <div className='education'>
         <h2>Education</h2>
-        <form>
-          <label>
-            School Name:
-            <input type='text' name='schoolName' />
-          </label>
+        <label htmlFor='schoolName'>
+          School Name:
+          <input
+            type='text'
+            name='schoolName'
+            id='schoolName'
+            placeholder='Enter your school name'
+            value={FormData.schoolName}
+            onChange={handleChange}
+          />
+        </label>
 
-          <label>
-            Title of Study:
-            <input type='text' name='titleOfStudy' />
-          </label>
+        <label htmlFor='titleOfStudy'>
+          Title of Study:
+          <input
+            type='text'
+            name='titleOfStudy'
+            id='titleOfStudy'
+            placeholder='Enter your title of study'
+            value={FormData.titleOfStudy}
+            onChange={handleChange}
+          />
+        </label>
 
-          <label>
-            Date Attended:
-            <input
-              type='text'
-              name='dateAttended'
-              placeholder='e.g. 2019-2021'
-            />
-          </label>
-        </form>
+        <label htmlFor='dateAttended'>
+          Date Attended:
+          <input
+            type='text'
+            name='dateAttended'
+            id='dateAttended'
+            placeholder='e.g. 2019-2021'
+            value={FormData.dateAttended}
+            onChange={handleChange}
+          />
+        </label>
       </div>
     );
   }

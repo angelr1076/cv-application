@@ -1,38 +1,59 @@
 import React from 'react';
 
-function handleSubmit(event) {
-  event.preventDefault();
-  const data = new FormData(event.target);
-  const value = Object.fromEntries(data.entries());
-  console.log({ value });
-}
-
 class Personal extends React.Component {
   render() {
+    const { handleChange } = this.props;
+
     return (
       <div className='personal'>
         <h2>Personal Information</h2>
-        <form onSubmit={handleSubmit}>
-          <label>
-            First Name:
-            <input type='text' name='firstName' />
-          </label>
+        <label htmlFor='firstName'>
+          First Name:
+          <input
+            type='text'
+            name='firstName'
+            id='firstName'
+            placeholder='Enter your first name'
+            value={FormData.firstName}
+            onChange={handleChange}
+          />
+        </label>
 
-          <label>
-            Last Name:
-            <input type='text' name='lastName' />
-          </label>
+        <label htmlFor='lastName'>
+          Last Name:
+          <input
+            type='text'
+            name='lastName'
+            id='lastName'
+            placeholder='Enter your last name'
+            value={FormData.lastName}
+            onChange={handleChange}
+          />
+        </label>
 
-          <label>
-            Email:
-            <input type='text' name='email' />
-          </label>
+        <label htmlFor='email'>
+          Email:
+          <input
+            type='text'
+            name='email'
+            id='email'
+            placeholder='Enter your email'
+            value={FormData.email}
+            onChange={handleChange}
+          />
+        </label>
 
-          <label>
-            Phone:
-            <input type='text' name='phone' />
-          </label>
-        </form>
+        <label htmlFor='phone'>
+          Phone:
+          <input
+            type='text'
+            id='phone'
+            name='phone'
+            placeholder='Enter your phone number'
+            value={FormData.phone}
+            onChange={handleChange}
+          />
+        </label>
       </div>
     );
   }
