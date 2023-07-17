@@ -2,7 +2,7 @@ import React from 'react';
 
 class Personal extends React.Component {
   render() {
-    const { handleChange } = this.props;
+    const { firstName, lastName, email, phone, handleChange } = this.props;
 
     return (
       <div className='personal'>
@@ -14,7 +14,7 @@ class Personal extends React.Component {
             name='firstName'
             id='firstName'
             placeholder='Enter your first name'
-            value={FormData.firstName}
+            value={firstName}
             onChange={handleChange}
           />
         </label>
@@ -26,7 +26,7 @@ class Personal extends React.Component {
             name='lastName'
             id='lastName'
             placeholder='Enter your last name'
-            value={FormData.lastName}
+            value={lastName}
             onChange={handleChange}
           />
         </label>
@@ -38,7 +38,7 @@ class Personal extends React.Component {
             name='email'
             id='email'
             placeholder='Enter your email'
-            value={FormData.email}
+            value={email}
             onChange={handleChange}
           />
         </label>
@@ -50,7 +50,7 @@ class Personal extends React.Component {
             id='phone'
             name='phone'
             placeholder='Enter your phone number'
-            value={FormData.phone}
+            value={phone}
             onChange={handleChange}
           />
         </label>

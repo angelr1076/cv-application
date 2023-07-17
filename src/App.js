@@ -39,9 +39,11 @@ function App() {
 
   function handleSubmit(e) {
     e.preventDefault();
+    // Reset state
+    setFormData(initialFormData);
+
     const data = new FormData(e.target);
     const value = Object.fromEntries(data.entries());
-    setFormData(initialFormData);
     console.log({ value });
   }
 
@@ -60,25 +62,20 @@ function App() {
       <main>
         <form onSubmit={handleSubmit}>
           <Personal
-            firstName={firstName}
-            lastName={lastName}
-            email={email}
-            phone={phone}
-            handleChange={handleChange}
+            value={{ firstName, lastName, email, phone, handleChange }}
           />
           <Experience
-            schoolName={schoolName}
-            titleOfStudy={titleOfStudy}
-            dateAttended={dateAttended}
-            handleChange={handleChange}
+            value={{
+              companyName,
+              positionTitle,
+              mainTasks,
+              dateStarted,
+              dateEnded,
+              handleChange,
+            }}
           />
           <Education
-            companyName={companyName}
-            positionTitle={positionTitle}
-            mainTasks={mainTasks}
-            dateStarted={dateStarted}
-            dateEnded={dateEnded}
-            handleChange={handleChange}
+            value={{ schoolName, titleOfStudy, dateAttended, handleChange }}
           />
           <button type='submit'>Submit</button>
         </form>

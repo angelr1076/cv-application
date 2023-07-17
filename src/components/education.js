@@ -2,7 +2,7 @@ import React from 'react';
 
 class Education extends React.Component {
   render() {
-    const { handleChange } = this.props;
+    const { schoolName, titleOfStudy, dateAttended, handleChange } = this.props;
 
     return (
       <div className='education'>
@@ -14,7 +14,7 @@ class Education extends React.Component {
             name='schoolName'
             id='schoolName'
             placeholder='Enter your school name'
-            value={FormData.schoolName}
+            value={schoolName}
             onChange={handleChange}
           />
         </label>
@@ -26,7 +26,7 @@ class Education extends React.Component {
             name='titleOfStudy'
             id='titleOfStudy'
             placeholder='Enter your title of study'
-            value={FormData.titleOfStudy}
+            value={titleOfStudy}
             onChange={handleChange}
           />
         </label>
@@ -38,7 +38,7 @@ class Education extends React.Component {
             name='dateAttended'
             id='dateAttended'
             placeholder='e.g. 2019-2021'
-            value={FormData.dateAttended}
+            value={dateAttended}
             onChange={handleChange}
           />
         </label>

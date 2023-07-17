@@ -3,7 +3,14 @@ import React from 'react';
 class Experience extends React.Component {
   // create a form with the following fields: company name, position title, main tasks, date started, date ended
   render() {
-    const { handleChange } = this.props;
+    const {
+      companyName,
+      positionTitle,
+      mainTasks,
+      dateStarted,
+      dateEnded,
+      handleChange,
+    } = this.props;
 
     return (
       <div className='experience'>
@@ -15,7 +22,7 @@ class Experience extends React.Component {
             name='companyName'
             id='companyName'
             placeholder='Enter your company name'
-            value={FormData.companyName}
+            value={companyName}
             onChange={handleChange}
           />
         </label>
@@ -27,7 +34,7 @@ class Experience extends React.Component {
             name='positionTitle'
             id='positionTitle'
             placeholder='Enter your position title'
-            value={FormData.positionTitle}
+            value={positionTitle}
             onChange={handleChange}
           />
         </label>
@@ -39,7 +46,7 @@ class Experience extends React.Component {
             name='mainTasks'
             id='mainTasks'
             placeholder='Enter your main tasks'
-            value={FormData.mainTasks}
+            value={mainTasks}
             onChange={handleChange}
           />
         </label>
@@ -49,8 +56,8 @@ class Experience extends React.Component {
             type='date'
             name='dateStarted'
             id='dateStarted'
-            placeholder='e.g. 2019-2021'
-            value={FormData.dateStarted}
+            placeholder='e.g. 10/20/2020'
+            value={dateStarted}
             onChange={handleChange}
           />
         </label>
@@ -61,8 +68,8 @@ class Experience extends React.Component {
             type='date'
             name='dateEnded'
             id='dateEnded'
-            placeholder='e.g. 2019-2021'
-            value={FormData.dateEnded}
+            placeholder='e.g. 10/20/2023'
+            value={dateEnded}
             onChange={handleChange}
           />
         </label>
