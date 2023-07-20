@@ -4,72 +4,72 @@ class Experience extends React.Component {
   // create a form with the following fields: company name, position title, main tasks, date started, date ended
   render() {
     const {
-      companyName,
-      positionTitle,
-      mainTasks,
-      dateStarted,
-      dateEnded,
+      company,
+      position,
+      duties,
+      started,
+      ended,
       handleChange,
     } = this.props;
 
     return (
       <div className='experience'>
         <h2>Experience</h2>
-        <label htmlFor='companyName'>
+        <label htmlFor='company'>
           Company Name:
           <input
             type='text'
-            name='companyName'
-            id='companyName'
+            name='company'
+            id='company'
             placeholder='Enter your company name'
-            value={companyName}
+            value={company}
             onChange={handleChange}
           />
         </label>
 
-        <label htmlFor='positionTitle'>
+        <label htmlFor='position'>
           Position Title:
           <input
             type='text'
-            name='positionTitle'
-            id='positionTitle'
+            name='position'
+            id='position'
             placeholder='Enter your position title'
-            value={positionTitle}
+            value={position}
             onChange={handleChange}
           />
         </label>
 
-        <label htmlFor='mainTasks'>
+        <label htmlFor='duties'>
           Main Tasks:
           <input
             type='text'
-            name='mainTasks'
-            id='mainTasks'
+            name='duties'
+            id='duties'
             placeholder='Enter your main tasks'
-            value={mainTasks}
+            value={duties}
             onChange={handleChange}
           />
         </label>
-        <label htmlFor='dateStarted'>
+        <label htmlFor='started'>
           Date Started:
           <input
             type='date'
-            name='dateStarted'
-            id='dateStarted'
+            name='started'
+            id='started'
             placeholder='e.g. 10/20/2020'
-            value={dateStarted}
+            value={started}
             onChange={handleChange}
           />
         </label>
 
-        <label htmlFor='dateEnded'>
+        <label htmlFor='ended'>
           Date Ended:
           <input
             type='date'
-            name='dateEnded'
-            id='dateEnded'
+            name='ended'
+            id='ended'
             placeholder='e.g. 10/20/2023'
-            value={dateEnded}
+            value={ended}
             onChange={handleChange}
           />
         </label>

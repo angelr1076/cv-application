@@ -2,7 +2,7 @@ import React from 'react';
 
 class Personal extends React.Component {
   render() {
-    const { firstName, lastName, email, phone, handleChange } = this.props;
+    const { firstname, lastname, email, phone, handleChange } = this.props;
 
     return (
       <div className='personal'>
@@ -11,10 +11,10 @@ class Personal extends React.Component {
           First Name:
           <input
             type='text'
-            name='firstName'
-            id='firstName'
+            name='firstname'
+            id='firstname'
             placeholder='Enter your first name'
-            value={firstName}
+            value={firstname}
             onChange={handleChange}
           />
         </label>
@@ -23,10 +23,10 @@ class Personal extends React.Component {
           Last Name:
           <input
             type='text'
-            name='lastName'
-            id='lastName'
+            name='lastname'
+            id='lastname'
             placeholder='Enter your last name'
-            value={lastName}
+            value={lastname}
             onChange={handleChange}
           />
         </label>
